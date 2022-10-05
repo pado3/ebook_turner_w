@@ -4,5 +4,5 @@ BLE ebook page turner with ESP32 &amp; Arduino IDE
 This is a simple project for turning forward/backward page and back to bookshelf of ebook application through BLE (Bluetooth Low Energy). I confirmed its operation with SONY Reader, Kinoppy, BOOK WALKER, Booklive, 読書尚友, なろうリーダ, which are all Android apps. This project is made with Arduino IDE on ESP32-WROOM-32E.
 </p><p>
 I wrote blog about this item in Japanese. Please access if you need.<br />
-https://pado.tea-nifty.com/top/2022/09/post-d93f81.html
+https://pado.tea-nifty.com/top/2022/10/post-59eaff.html
 </p><p>
