@@ -2,6 +2,7 @@
 // copyright (c) by @pado3
 // ver.1.0 2022/08/19
 // ver.2.0 2022/09/26 Add battery check function, refactoring
+// ver.2.1 2022/10/01 Change voltage monitor position from reg. to batt.
 // 
 // Note:
 //  ReaderはDOWNで送りUPで戻る。Kinoppyは逆。読書尚友・なろうリーダは選択可能でReaderに合わせる。
@@ -28,8 +29,8 @@ uint8_t UP = 17;
 uint8_t BK = 13;
 uint8_t LED = 15; // GPIO1-3 is not recommended
 // Vmax and Vth will compare with Vcal, uint32_t
-uint32_t Vmax = 1650;  // ADC input max level Vdd typ. 3.3/2=1.65V, in [mV]
-uint32_t Vth = 1500; // Vdd min 3.0V/2=1.5V, in [mV]
+uint32_t Vmax = 1850;  // Li-Po max. 3.7/2=1.85V, in [mV]
+uint32_t Vth = 1600; // Vdd min (3.0V/2=1.5V) + Regulator drop (0.1V), in [mV]
 
 void setup() {
   pinMode(LED,OUTPUT); 
@@ -45,7 +46,7 @@ void setup() {
   Serial.begin(115200);
   Serial.println();
   Serial.println("START " __FILE__ " from " __DATE__ " " __TIME__);
-  Serial.println("ver.2.0 2022/09/26 Add battery check function, refactoring");
+  Serial.println("ver.2.1 2022/10/01 Change voltage monitor position");
   checkbatt();
   bleKeyboard.begin();
   for(uint8_t i=0; i<3; i++) {  // splash, short blink 3 times
