@@ -16,7 +16,7 @@ uint8_t measBatteryLevel() {
   }
   Serial.print("battery level: ");
   Serial.print(batt);
-  Serial.println("% (% means 3.0~3.3V)");
+  Serial.println("% (% means 3.1~3.6V)"); // 2r1
   return batt;
 }
 
