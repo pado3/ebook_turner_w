@@ -16,14 +16,14 @@ uint8_t measBatteryLevel() {
   }
   Serial.print("battery level: ");
   Serial.print(batt);
-  Serial.println("% (% means 3.2~3.7V)"); // 2r1
+  Serial.println("% (% means 3.2~3.7V)"); // 2r2
   return batt;
 }
 
 void checkbatt() {
   uint8_t batt = measBatteryLevel();
   bleKeyboard.setBatteryLevel(batt);
-  if(batt = 0) {   // battery level LOW
+  if(batt == 0) {   // battery level LOW
     for(uint8_t i=0; i<5; i++) {   // long blink 5 times
       digitalWrite(LED, HIGH);
       delay(1000);
