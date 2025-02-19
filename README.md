@@ -5,4 +5,11 @@ This is a simple project for turning forward/backward page and back to bookshelf
 </p><p>
 I wrote blog about this item in Japanese. Please access if you need.<br />
 https://pado.tea-nifty.com/top/2022/10/post-59eaff.html
+<hr>
+<strong>rpi_movie_ctl.ino</strong>
+</p><p>
+I modified the page turner to make it an auxiliary device for playing videos in the web browser on the Raspberry Pi.
+It has left and right arrow keys to skip videos, an escape key to leave the full screen mode, and a macro to launch Firefox.</p><p>
+I wrote blog about this item in Japanese. Please access if you need.<br />
+https://pado.tea-nifty.com/top/2025/02/post-457257.html
 </p><p>
